@@ -1,0 +1,56 @@
+version: "3.1"
+
+stories:
+- story: recommend similar artists
+  steps:
+    - intent: ask_similar_artists
+      entities:
+        - artist_name: "Coldplay"
+    - slot_was_set:
+        - artist_name: "Coldplay"
+    - action: action_list_similar_artists
+
+- story: recommend top tracks by genre
+  steps:
+    - intent: ask_top_tracks_by_genre
+      entities:
+        - genre: "Rock"
+    - slot_was_set:
+        - genre: "Rock"
+    - action: action_list_top_songs_by_genre
+
+- story: recommend random song
+  steps:
+    - intent: ask_random_song
+    - action: action_recommend_random_song
+
+- story: clarify missing details for similar songs
+  steps:
+    - intent: ask_similar_songs
+    - action: song_recommendation_form
+    - active_loop: song_recommendation_form
+    - active_loop: null
+    - action: action_list_similar_songs
+
+- story: interactive music recommendation session
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_capability
+    - action: utter_ask_capability
+    - intent: ask_similar_artists
+      entities:
+        - artist_name: "The Beatles"
+    - slot_was_set:
+        - artist_name: "The Beatles"
+    - action: action_list_similar_artists
+    - intent: ask_top_tracks_by_genre
+      entities:
+        - genre: "Pop"
+    - slot_was_set:
+        - genre: "Pop"
+    - action: action_list_top_songs_by_genre
+    - intent: ask_random_song
+    - action: action_recommend_random_song
+    - intent: goodbye
+    - action: utter_goodbye

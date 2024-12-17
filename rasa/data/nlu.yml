@@ -1,0 +1,69 @@
+version: "3.1"
+
+nlu:
+# Greeting intent
+- intent: greet
+  examples: |
+    - Hi
+    - Hello
+    - Hey there
+    - Hi bot
+    - Greetings
+
+# Goodbye intent
+- intent: goodbye
+  examples: |
+    - Bye
+    - Goodbye
+    - See you later
+    - Farewell
+    - Talk to you soon
+
+# Bot capabilities
+- intent: ask_capability
+  examples: |
+    - What can you do?
+    - What are your capabilities?
+    - How can you help me?
+    - Tell me what you can do
+    - What services do you provide?
+
+# Recommend similar artists
+- intent: ask_similar_artists
+  examples: |
+    - Show me artists like [Coldplay](artist_name)
+    - I want artists similar to [Ed Sheeran](artist_name)
+    - Who sounds like [The Beatles](artist_name)?
+    - Recommend artists similar to [Adele](artist_name)
+
+# Recommend similar songs
+- intent: ask_similar_songs
+  examples: |
+    - Songs like [Shape of You](track_name) by [Ed Sheeran](artist_name)
+    - Can you recommend songs similar to [Hello](track_name) by [Adele](artist_name)?
+    - What songs are similar to [Imagine](track_name) by [John Lennon](artist_name)?
+    - I need songs like [Someone Like You](track_name) by [Adele](artist_name)
+
+# Top tracks by genre
+- intent: ask_top_tracks_by_genre
+  examples: |
+    - What are the top songs in [Rock](genre)?
+    - Show me the best tracks in the [Pop](genre) genre
+    - I need the top songs for [Jazz](genre)
+    - Recommend tracks in [Hip-Hop](genre)
+
+# Random song
+- intent: ask_random_song
+  examples: |
+    - Give me a random song
+    - Surprise me with a song
+    - Suggest a random track
+    - Recommend a song at random
+
+# Out of scope intent
+- intent: out_of_scope
+  examples: |
+    - Can you tell me the weather?
+    - How old are you?
+    - Who won the football match yesterday?
+    - I want movie recommendations

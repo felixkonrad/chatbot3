@@ -1,0 +1,23 @@
+# Python files
+*.pyc
+__pycache__/
+
+# Virtual environment
+venv/
+.env
+
+# Rasa cache and logs
+*.db
+rasa.db
+*.log
+*.lock
+
+# Flask files
+instance/
+
+# IDE and OS files
+.vscode/
+.DS_Store
+
+# Scripts
+*.bat
