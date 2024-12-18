@@ -6,10 +6,16 @@ intents:
   - ask_capability
   - ask_similar_artists
   - ask_similar_songs
-  - ask_top_tracks_by_genre
+  - ask_songs_by_genre
   - ask_random_song
-  - inform_song_artist
-  - out_of_scope
+  - affirm
+  - deny
+  - thanks
+  - smalltalk
+  - inform_song
+  - inform_artist
+  - inform_genre
+  - insult
 
 entities:
   - artist_name
@@ -33,45 +39,71 @@ slots:
       - type: from_entity
         entity: genre
 
-forms:
-  song_recommendation_form:
-    required_slots:
-      track_name:
-        - type: from_entity
-          entity: track_name
-      artist_name:
-        - type: from_entity
-          entity: artist_name
+responses:
+  utter_greet:
+    - text: "Hello! I'm your music recommendation bot. How can I help you today?"
+
+  utter_goodbye:
+    - text: "Goodbye! Enjoy your music recommendations!"
+
+  utter_ask_capability:
+    - text: "I can help you with the following:\n- Recommend similar artists.\n- Recommend songs similar to a track.\n- Recommend top songs from a genre.\n- Suggest a random song.\nHow can I assist you?"
+
+  utter_ask_for_artist_name:
+    - text: "Please provide the name of the artist."
+
+  utter_ask_for_track_name:
+    - text: "Please provide the name of the song."
+
+  utter_ask_for_genre:
+    - text: "What genre of music would you like to explore?"
+
+  utter_affirm:
+    - text: Great!
+    - text: Awesome!
+    - text: Perfect!
+
+  utter_deny:
+  - text: No problem. Let me know if you need anything else.
+  - text: Okay. I'm here if you have any other questions.
+  - text: Understood. If you need more help, just let me know.
+
+  utter_smalltalk:
+  - text: "I don't sing, but I can help you discover amazing songs and artists!"
+  - text: "I don't play instruments, but I can recommend top tracks for you to enjoy!"
+  - text: "I can't dance, but I can find the perfect music for your mood!"
+  - text: "I'm not a musician, but I know how to find the best tunes for you!"
+  - text: "I don't listen to music, but I can help you explore genres and artists!"
+
+  utter_thanks:
+    - text: "You're welcome! Let me know if you need more help."
+    - text: "Happy to help! What else can I do for you?"
+
+  utter_out_of_scope:
+    - text: "I'm sorry, I can only help with music recommendations. Could you try asking about songs, artists, or genres?"
+
+  utter_insult:
+  - text: "Hey, thats not very nice of you. I'd rather we talk about music again."
+
+  utter_did_not_understand:
+  - text: "I'm sorry, I didn't quite catch that. Can you rephrase that please?"
+
+  utter_clarify_similar_request:
+  - text: "Are you looking for songs similar to a track, or just similar artists?"
+
+  utter_default:
+    - text: "Sorry, I didn't understand that. Can you rephrase?"
+
+
+
+
 
 actions:
+  - action_default_fallback
   - action_list_similar_artists
   - action_list_similar_songs
   - action_list_top_songs_by_genre
   - action_recommend_random_song
-
-responses:
-  utter_greet:
-    - text: "Hello! I'm your music recommendation bot. I can suggest similar artists, tracks, top songs by genre, and even random songs. How can I help you today?"
-
-  utter_goodbye:
-    - text: "Goodbye! Enjoy the music. Let me know if you need any more recommendations!"
-
-  utter_ask_capability:
-    - text: |
-        I can help with the following:
-        - Recommend similar artists to a given one.
-        - Recommend songs similar to a given track (with artist name).
-        - Recommend top tracks from a specific genre.
-        - Provide random song recommendations.
-
-  utter_ask_for_details:
-    - text: "Could you please specify both the song name and the artist name so I can fetch accurate results?"
-
-  utter_default:
-    - text: "I'm not sure how to help with that. Try asking about artists, songs, or genres!"
-
-  utter_out_of_scope:
-    - text: "Sorry, I can't help with that. I specialize in music recommendations!"
 
 session_config:
   session_expiration_time: 60

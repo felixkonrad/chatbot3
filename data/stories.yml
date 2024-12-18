@@ -1,56 +1,87 @@
 version: "3.1"
 
 stories:
-- story: recommend similar artists
-  steps:
-    - intent: ask_similar_artists
-      entities:
-        - artist_name: "Coldplay"
-    - slot_was_set:
-        - artist_name: "Coldplay"
-    - action: action_list_similar_artists
-
-- story: recommend top tracks by genre
-  steps:
-    - intent: ask_top_tracks_by_genre
-      entities:
-        - genre: "Rock"
-    - slot_was_set:
-        - genre: "Rock"
-    - action: action_list_top_songs_by_genre
-
-- story: recommend random song
-  steps:
-    - intent: ask_random_song
-    - action: action_recommend_random_song
-
-- story: clarify missing details for similar songs
-  steps:
-    - intent: ask_similar_songs
-    - action: song_recommendation_form
-    - active_loop: song_recommendation_form
-    - active_loop: null
-    - action: action_list_similar_songs
-
-- story: interactive music recommendation session
+- story: Greet the user
   steps:
     - intent: greet
     - action: utter_greet
-    - intent: ask_capability
-    - action: utter_ask_capability
-    - intent: ask_similar_artists
-      entities:
-        - artist_name: "The Beatles"
-    - slot_was_set:
-        - artist_name: "The Beatles"
-    - action: action_list_similar_artists
-    - intent: ask_top_tracks_by_genre
-      entities:
-        - genre: "Pop"
-    - slot_was_set:
-        - genre: "Pop"
-    - action: action_list_top_songs_by_genre
-    - intent: ask_random_song
-    - action: action_recommend_random_song
+
+- story: Say goodbye to the user
+  steps:
     - intent: goodbye
     - action: utter_goodbye
+
+- story: thank user
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- story: capabilities
+  steps:
+    - intent: ask_capability
+    - action: utter_ask_capability
+
+- story: affirm user
+  steps:
+  - intent: affirm
+  - action: utter_affirm
+
+- story: deny user
+  steps:
+  - intent: deny
+  - action: utter_deny
+
+- story: smalltalk user
+  steps:
+  - intent: smalltalk
+  - action: utter_smalltalk
+
+- story: out_of_scope
+  steps: 
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+
+- story: Recommend similar artists
+  steps:
+    - intent: ask_similar_artists
+      entities:
+        - artist_name: "Coldplay"
+    - slot_was_set:
+        - artist_name: "Coldplay"
+    - action: action_list_similar_artists
+
+- story: Recommend similar Songs
+  steps:
+    - intent: ask_similar_songs
+    - action: utter_ask_for_artist_name
+    - intent: inform_artist
+      entities:
+        - artist_name: "Adele"
+    - slot_was_set:
+        - artist_name: "Adele"
+    - action: utter_ask_for_track_name
+    - intent: inform_song
+      entities:
+        - track_name: "Hello"
+    - slot_was_set:
+        - track_name: "Hello"
+    - action: action_list_similar_songs
+
+
+- story: ask for genre and provide songs
+  steps:
+    - intent: ask_songs_by_genre
+    - action: utter_ask_for_genre
+    - intent: inform_genre
+      entities:
+        - genre: "metal"
+    - slot_was_set:
+        - genre: "metal"
+    - action: action_list_top_songs_by_genre
+
+
+- story: Recommend a random song
+  steps:
+    - intent: ask_random_song
+    - action: action_recommend_random_song

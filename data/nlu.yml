@@ -4,11 +4,13 @@ nlu:
 # Greeting intent
 - intent: greet
   examples: |
-    - Hi
     - Hello
+    - Hi
     - Hey there
+    - Good morning
+    - Good evening
     - Hi bot
-    - Greetings
+    - Hello there
 
 # Goodbye intent
 - intent: goodbye
@@ -17,53 +19,171 @@ nlu:
     - Goodbye
     - See you later
     - Farewell
-    - Talk to you soon
+    - Have a great day
+    - Bye bye
 
-# Bot capabilities
+# Thank the bot
+- intent: thanks
+  examples: |
+    - Thank you
+    - Thanks
+    - I appreciate it
+    - Many thanks
+    - Thanks a lot
+
+# Ask for capabilities
 - intent: ask_capability
   examples: |
     - What can you do?
-    - What are your capabilities?
+    - Tell me about your capabilities
     - How can you help me?
-    - Tell me what you can do
     - What services do you provide?
+    - What features do you have?
 
-# Recommend similar artists
-- intent: ask_similar_artists
+# Affirmation intent
+- intent: affirm
   examples: |
-    - Show me artists like [Coldplay](artist_name)
-    - I want artists similar to [Ed Sheeran](artist_name)
-    - Who sounds like [The Beatles](artist_name)?
-    - Recommend artists similar to [Adele](artist_name)
+    - Yes
+    - Yep
+    - Sure
+    - Absolutely
+    - That’s right
+    - Correct
 
-# Recommend similar songs
-- intent: ask_similar_songs
+# Deny intent
+- intent: deny
   examples: |
-    - Songs like [Shape of You](track_name) by [Ed Sheeran](artist_name)
-    - Can you recommend songs similar to [Hello](track_name) by [Adele](artist_name)?
-    - What songs are similar to [Imagine](track_name) by [John Lennon](artist_name)?
-    - I need songs like [Someone Like You](track_name) by [Adele](artist_name)
+    - No
+    - Nope
+    - I don’t think so
+    - Not really
+    - Nah
 
-# Top tracks by genre
-- intent: ask_top_tracks_by_genre
+# Smalltalk intent
+- intent: smalltalk
   examples: |
-    - What are the top songs in [Rock](genre)?
-    - Show me the best tracks in the [Pop](genre) genre
-    - I need the top songs for [Jazz](genre)
-    - Recommend tracks in [Hip-Hop](genre)
-
-# Random song
-- intent: ask_random_song
-  examples: |
-    - Give me a random song
-    - Surprise me with a song
-    - Suggest a random track
-    - Recommend a song at random
+    - How are you?
+    - What’s up?
+    - How’s it going?
+    - Tell me a joke
+    - Do you like music?
+    - Are you a real person?
 
 # Out of scope intent
 - intent: out_of_scope
   examples: |
-    - Can you tell me the weather?
-    - How old are you?
-    - Who won the football match yesterday?
-    - I want movie recommendations
+    - What is the weather today?
+    - Can you book a flight?
+    - How do I get to the airport?
+    - What's your favorite color?
+    - I want to buy shoes online.
+
+# Ask for similar artists
+- intent: ask_similar_artists
+  examples: |
+    - Recommend me artists similar to [Coldplay](artist_name)
+    - Who are artists like [Adele](artist_name)?
+    - Suggest similar artists to [Eminem](artist_name)
+    - Find artists like [Taylor Swift](artist_name)
+    - Can you suggest artists similar to [Drake](artist_name)?
+    - Show me artists like [The Weeknd](artist_name)
+    - Recommend some artists similar to [Ed Sheeran](artist_name)
+    - Who sounds similar to [Lana Del Rey](artist_name)?
+    - Find artists like [Beyoncé](artist_name)
+    - Suggest other artists similar to [Billie Eilish](artist_name)
+    - Are there any artists like [Bruno Mars](artist_name)?
+    - Who are some artists similar to [Post Malone](artist_name)?
+    - Could you recommend artists like [Ariana Grande](artist_name)?
+    - Suggest similar artists to [Shawn Mendes](artist_name)
+    - Can you find artists similar to [Kanye West](artist_name)?
+    - Find me artists like [Rihanna](artist_name)
+    - Who are artists similar to [Justin Bieber](artist_name)?
+    - Suggest similar artists to [Lady Gaga](artist_name)
+    - Recommend me some artists like [Sam Smith](artist_name)
+    - Which artists are similar to [Harry Styles](artist_name)?
+    - Can you suggest similar artists to [Katy Perry](artist_name)?
+    - Who are some artists like [Zayn Malik](artist_name)?
+    - Show me artists similar to [Nicki Minaj](artist_name)
+    - Find other artists like [Alicia Keys](artist_name)
+    - Suggest me artists who are similar to [Sia](artist_name)
+    - Can you recommend artists like [John Legend](artist_name)?
+
+# Ask for similar songs
+- intent: ask_similar_songs
+  examples: |
+    - Can you suggest songs similar to [Hello](track_name) by [Adele](artist_name)?
+    - Recommend me similar songs to [Shape of You](track_name) by [Ed Sheeran](artist_name)
+    - What songs are like [Blinding Lights](track_name) by [The Weeknd](artist_name)?
+    - What songs sound like [Rolling in the Deep](track_name) by [Adele](artist_name)?
+    - Can you find songs similar to [Someone Like You](track_name) by [Adele](artist_name)?
+    - Suggest tracks like [Perfect](track_name) by [Ed Sheeran](artist_name)
+    - Are there songs similar to [Thinking Out Loud](track_name) by [Ed Sheeran](artist_name)?
+    - Recommend songs that are like [Watermelon Sugar](track_name) by [Harry Styles](artist_name)
+    - I want songs similar to [Bad Guy](track_name) by [Billie Eilish](artist_name)
+    - Find songs like [Happier Than Ever](track_name) by [Billie Eilish](artist_name)
+    - Suggest me songs that are like [All of Me](track_name) by [John Legend](artist_name)
+    - Can you recommend tracks similar to [Shallow](track_name) by [Lady Gaga](artist_name)?
+    - What songs are similar to [Blinding Lights](track_name) by [The Weeknd](artist_name)?
+    - Do you know any tracks similar to [Stay](track_name) by [The Kid LAROI](artist_name)?
+    - Can you list songs like [Levitating](track_name) by [Dua Lipa](artist_name)?
+    - What songs are like [Drivers License](track_name) by [Olivia Rodrigo](artist_name)?
+    - Suggest songs that are like [Old Town Road](track_name) by [Lil Nas X](artist_name)
+    - Give me a list of songs similar to [Circles](track_name) by [Post Malone](artist_name)
+    - Do you have any recommendations like [Lose Yourself](track_name) by [Eminem](artist_name)?
+    - I'd like songs similar to [Bohemian Rhapsody](track_name) by [Queen](artist_name)
+    - What songs are comparable to [Imagine](track_name) by [John Lennon](artist_name)?
+    - Show me songs similar to [Hotel California](track_name) by [Eagles](artist_name)
+    - Can you suggest songs like [Back in Black](track_name) by [AC/DC](artist_name)?
+    - A song similar to [Endzeit](track_name) by [Heaven Shall Burn](artist_name)
+    - Recommend a song similar to [Doomsday](track_name) by [Architects](artist_name)
+    - Songs like [Vice Grip](track_name) by [Parkway Drive](artist_name)
+
+# Inform artist name
+- intent: inform_artist
+  examples: |
+    - The artist is [Adele](artist_name)
+    - It's by [Coldplay](artist_name)
+    - Artist: [Taylor Swift](artist_name)
+    - [Eminem](artist_name)
+
+# Inform song name
+- intent: inform_song
+  examples: |
+    - The song is [Hello](track_name)
+    - Song: [Shape of You](track_name)
+    - It’s called [Blinding Lights](track_name)
+
+# Ask for songs by genre
+- intent: ask_songs_by_genre
+  examples: |
+    - What are the top songs in the [rock](genre) genre?
+    - Recommend me some [pop](genre) songs
+    - Show me the best [jazz](genre) songs
+    - List some trending [hip-hop](genre) tracks
+    - I want songs in the [classical](genre) genre
+
+# Inform genre
+- intent: inform_genre
+  examples: |
+    - The genre is [rock](genre)
+    - I like [pop](genre)
+    - Genre: [jazz](genre)
+    - It’s [hip-hop](genre)
+
+# Ask for a random song
+- intent: ask_random_song
+  examples: |
+    - Give me a random song
+    - Surprise me with a song
+    - Recommend me something random
+    - Any random music suggestion?
+
+#Insult the Bot
+- intent: insult
+  examples: |
+    - You're useless.
+    - You are so dumb.
+    - I hate you.
+    - You're terrible at this.
+    - You don't know anything.
+    - Stupid bot.

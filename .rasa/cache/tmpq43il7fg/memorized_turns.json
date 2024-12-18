@@ -1,0 +1,16 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJwtisEJgDAMAFfpAE7QVURCW4KUalqSKEjJ7gb0d8fdOm0JczDekIrWTjHMD4DSiTH8clRRJH8vQfankqt6lgbaByin0gTyAzsSo9n2Ah4QIvA=": "action_list_top_songs_by_genre",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB1fkl8QX1KUmJxdHJ9UGZ+emleUWku8qWDtxfl56Ui6ibcmFgA++0tB": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB1flJiXkp8bX5yfl15bGwsAElofow==": "action_recommend_random_song",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB1flJiXkp8bX5yfl15LnGlFqcn5ubmpeSkoegkbHgsAGe5Dtg==": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB1fnJmbmZNYFJ9YVAJUVVxbGwsAlUIhZg==": "action_list_similar_artists",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB1fnJmbmZNYFJ9YVAJUVVxLvIkYWokzPxYAG7ZHAQ==": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohPT8/JakytbY2FgAh+hxX": "utter_goodbye",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohPT8/JakytZaAKaUlJalF8TDFuE2JBQCMqTcN": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB1fnJmbmZNYFF+cn5deXFsbCwBTLyCG": "song_recommendation_form",
+    "eJyNjEsKgDAMBa/SA3gCryISSo0SbFJJqpvSu1s/e929YYY3lNq5sike4EOmJL0rzwDxjL17IZJllNbuhtoakoa5aVvBiCl6BUuyWP34uyJQDIkZZfK3mZPyr+vxBCXfQ+0=": "action_list_similar_songs",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB1fnJmbmZNYFF+cn5deXEvAPJCi+KLU5Pzc3NS8lESwTFp+US4VjEZyKppGYsyOBQD4vWfI": "action_listen"
+  }
+}
