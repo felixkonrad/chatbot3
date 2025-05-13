@@ -5,7 +5,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 
 # Last.fm API Configuration
-LASTFM_API_KEY = "bd37cd7c48bd201b726aee7962538c03"
+LASTFM_API_KEY = "ADD_LASTFMKEY_HERE"
 BASE_URL = "http://ws.audioscrobbler.com/2.0/"
 
 
